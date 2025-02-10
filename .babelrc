@@ -1,0 +1,3 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"] // Добавлен preset для React, если вы его используете
+}
