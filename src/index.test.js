@@ -1,4 +1,3 @@
-/* C:\Users\Admin\JavaScript\event1.1\src\index.test.js */
 import { fireEvent, getByText, getByTestId, queryByText } from '@testing-library/dom';
 import '@testing-library/jest-dom';
 import './style.css';
@@ -48,7 +47,7 @@ describe('Goblin Game', () => {
         let newPosition;
         do {
           newPosition = Math.floor(Math.random() * cells.length);
-        } while (cells[newPosition] === initialCell); // Убедитесь, что новая позиция не совпадает с начальной
+        } while (cells[newPosition] === initialCell);
         cells[newPosition].appendChild(goblin);
       };
 

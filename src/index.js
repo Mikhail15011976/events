@@ -1,4 +1,3 @@
-/* C:\Users\Admin\JavaScript\event1.1\src\index.html */
 import './style.css';
 import goblinImage from './goblin.png';
 
@@ -17,7 +16,7 @@ class GoblinGame {
         this.fail = 0;
         this.totalClicks = 0;
         this.missedAppearances = 0;
-        this.maxMissedClicks = 5; // Максимальное количество пропущенных кликов
+        this.maxMissedClicks = 5;
         this.interval = null;
 
         this.init();
@@ -73,7 +72,7 @@ class GoblinGame {
         this.successCounter.textContent = this.success;
         this.goblin.remove();
         this.totalClicks++;
-        this.missedAppearances = 0; // Сбрасываем счетчик пропущенных появлений
+        this.missedAppearances = 0;
         this.checkGameEnd();
         this.moveGoblin();
     }
@@ -119,7 +118,7 @@ class GoblinGame {
         this.successCounter.textContent = this.success;
         this.failCounter.textContent = this.fail;
         this.resultDiv.style.display = 'none';
-        this.field.innerHTML = ''; // Очищаем поле перед началом новой игры
+        this.field.innerHTML = '';
         this.createGrid();
     }
 
@@ -134,7 +133,6 @@ class GoblinGame {
     }
 }
 
-// Инициализация игры
 if (document.getElementById('field')) {
     new GoblinGame(4);
 }

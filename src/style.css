@@ -1,4 +1,3 @@
-/* C:\Users\Admin\JavaScript\event1.1\src\style.css */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 100px);
@@ -29,7 +28,7 @@
 }
 
 #missed {
-  color: red; /* Выделяем пропущенные появления красным цветом */
+  color: red;
 }
 
 #result {

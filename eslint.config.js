@@ -4,8 +4,7 @@ const config = [
         languageOptions: {
             globals: {
                 window: 'readonly',
-                document: 'readonly',
-                // Добавьте другие глобальные переменные по необходимости
+                document: 'readonly',                
             },
             parserOptions: {
                 ecmaVersion: 12,
@@ -19,9 +18,8 @@ const config = [
         plugins: {
             react: require('eslint-plugin-react'),
         },
-        files: ['*.jsx', '*.js'], // Применить правила к файлам .jsx и .js
-    },
-    // Вы можете добавить дополнительные конфигурации для других типов файлов здесь
+        files: ['*.jsx', '*.js'],
+    },    
 ];
 
 module.exports = config;

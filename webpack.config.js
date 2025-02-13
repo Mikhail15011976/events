@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Укажите путь к вашему шаблону
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -18,8 +18,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader', // Добавляет CSS в DOM
-          'css-loader',   // Обрабатывает @import и url()
+          'style-loader',
+          'css-loader',
         ],
       },
       {
