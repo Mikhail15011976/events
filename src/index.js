@@ -4,13 +4,13 @@ import goblinImage from './goblin.png';
 class GoblinGame {
     constructor(gridSize) {
         this.gridSize = gridSize;
-        this.field = document.getElementById('field');
-        this.successCounter = document.getElementById('success');
-        this.failCounter = document.getElementById('fail');
-        this.resultDiv = document.getElementById('result');
-        this.finalSuccess = document.getElementById('final-success');
-        this.finalFail = document.getElementById('final-fail');
-        this.restartButton = document.getElementById('restart');
+        this.field = document.querySelector('#field');
+        this.successCounter = document.querySelector('#success');
+        this.failCounter = document.querySelector('#fail');
+        this.resultDiv = document.querySelector('#result');
+        this.finalSuccess = document.querySelector('#final-success');
+        this.finalFail = document.querySelector('#final-fail');
+        this.restartButton = document.querySelector('#restart');
 
         this.success = 0;
         this.fail = 0;
@@ -52,10 +52,11 @@ class GoblinGame {
         const cells = document.querySelectorAll('.cell');
         const currentCell = Array.from(cells).find(cell => cell.contains(this.goblin));
 
-        let newPosition;
-        do {
+        let newPosition = this.getRandomPosition();
+        
+        if (cells[newPosition] === currentCell) {
             newPosition = this.getRandomPosition();
-        } while (cells[newPosition] === currentCell);
+        }
 
         cells[newPosition].appendChild(this.goblin);
         this.missedAppearances++;
@@ -64,7 +65,7 @@ class GoblinGame {
     }
 
     updateMissedCounter() {
-        document.getElementById('missed').textContent = this.missedAppearances;
+        document.querySelector('#missed').textContent = this.missedAppearances;
     }
 
     handleGoblinClick() {
@@ -133,6 +134,6 @@ class GoblinGame {
     }
 }
 
-if (document.getElementById('field')) {
+if (document.querySelector('#field')) {
     new GoblinGame(4);
 }
